@@ -17,11 +17,20 @@ Now click on Free cluster and Upgrade and Create your kubernetes cluster on IBM 
 <hr/>
 
 It will take 10-15 minutes to full working Kubernetes cluster.
-[![](./2020-07-17_13-58.png)](#)
+[![](./2020-07-17_14-24.png)](#)
+<hr/>
+[![](./2020-07-17_14-32.png)](#)
 <hr/>
 
+You can see, only 1 worker node is created.
 
-Access Cluster from Command line
-##############
+Setup Access
+############
+
+Click on `Access` and follow instructions.
+[![](./2020-07-17_14-34.png)](#)
+<hr/>
+Or you can also use IBM cloud shell too to access the Cluster.
+[![](./2020-07-17_14-34_1.png)](#)
 
 
