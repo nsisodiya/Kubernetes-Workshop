@@ -132,7 +132,7 @@ Next?
 ============
 
 So, we have done created our free k8s cluster which is free and having just 1 worker node.
-Next step is deploy our hello world microservice code.
+Next step is run our hello world microservice code.
 
-[NEXT: 2-Deploy-HelloWorld-Service](./2-Deploy-HelloWorld-Service.md)
+[NEXT: 2-Run-HelloWorld-Locally](./2-Run-HelloWorld-Locally.md)
 

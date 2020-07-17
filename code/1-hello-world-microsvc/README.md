@@ -16,4 +16,6 @@ docker logs --follow helloworld-microsvc-container
 
 # Step 3 - Remove Container fully
 
-sudo docker rm -f helloworld-microsvc-container
+```
+docker rm -f helloworld-microsvc-container
+```
