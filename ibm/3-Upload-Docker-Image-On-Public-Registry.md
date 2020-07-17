@@ -79,3 +79,10 @@ Again, you need to see exact instructions in your git repo.
 After publish, you can verify at github.
 
 [![](./img/3/2020-07-17_18-14.png)](#)
+
+Please Note: It was getting error with having two slash (`\\`) so I used one slash to publish repo.
+
+What I used            : docker.pkg.github.com//nsisodiya/kubernetes-workshop/helloworld-microsvc:v1
+What it Show on github : docker.pkg.github.com/nsisodiya/kubernetes-workshop/helloworld-microsvc:v1
+
+It hope, this will not create any problem.
