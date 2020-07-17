@@ -26,12 +26,23 @@ After Sucess
 You can see, only 1 worker node is created.
 
 Setup Access
-############
+=============
 
 Click on `Access` and follow instructions.
 [![](./2020-07-17_14-34.png)](#)
 <hr/>
+
 Or you can also use IBM cloud shell too to access the Cluster.
 [![](./2020-07-17_14-34_1.png)](#)
 
+
+Kubernetes Dashboard
+====================
+You can explore Kubernetes Dashboard from here
+[![](./2020-07-17_14-40.png)](#)
+<br/>
+
+and this
+[![](./2020-07-17_14-41.png)](#)
+<br/>
 
