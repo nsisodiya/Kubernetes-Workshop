@@ -1,3 +1,6 @@
+Chapter 3 - Upload Docker Image on Public Registry
+==================================================
+
 Lets try to upload our docker image on public registry.
 
 Github Docker Registry
@@ -87,3 +90,11 @@ docker.pkg.github.com//nsisodiya/kubernetes-workshop/helloworld-microsvc:v1 - Wh
 docker.pkg.github.com/nsisodiya/kubernetes-workshop/helloworld-microsvc:v1 - What it Show on github
 
 It hope, this will not create any problem.
+
+
+Next ??
+=========
+
+So our Docker image is ready, lets deploy it on our Cluster.
+
+[NEXT: 4-Deploy-Our-Docker-Image-On-Cluster](./4-Deploy-Our-Docker-Image-On-Cluster.md)
