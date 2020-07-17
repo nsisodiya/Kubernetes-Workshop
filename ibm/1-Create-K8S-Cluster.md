@@ -117,6 +117,13 @@ and this
 <br/>
 
 
+Addons?
+=======
+
+Lets try `Kubernetes Terminal` addon.
+
+[![](./img/1/2020-07-17_15-24.png)](#)
+
 Next?
 ============
 
