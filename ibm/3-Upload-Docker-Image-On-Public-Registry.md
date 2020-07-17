@@ -82,8 +82,8 @@ After publish, you can verify at github.
 
 Please Note: It was getting error with having two slash (`\\`) so I used one slash to publish repo.
 
-What I used            : docker.pkg.github.com//nsisodiya/kubernetes-workshop/helloworld-microsvc:v1
+docker.pkg.github.com//nsisodiya/kubernetes-workshop/helloworld-microsvc:v1 - What I used to publish
 <br/>
-What it Show on github : docker.pkg.github.com/nsisodiya/kubernetes-workshop/helloworld-microsvc:v1
+docker.pkg.github.com/nsisodiya/kubernetes-workshop/helloworld-microsvc:v1 - What it Show on github
 
 It hope, this will not create any problem.
