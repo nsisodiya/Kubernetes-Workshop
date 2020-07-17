@@ -67,9 +67,20 @@ docker container list -a
 docker logs --follow helloworld-microsvc-container
 ```
 
-3. Open http://localhost:3000/ & http://localhost:3000/factorial/5
+1. Open http://localhost:3000/
 
-4. Cleapup
+or
+
+```
+curl http://localhost:3000
+```
+
+[![](./img/2/2020-07-17_15-56.png)](#)
+
+Please note that, Hostname is basically container id. We will create multiple pods (containers) in cluster and our traffic will be split between containers. This we will verify from container id.
+
+
+1. Cleapup
 
 ```
 docker rm -f helloworld-microsvc-container
