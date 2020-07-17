@@ -6,3 +6,7 @@ And Click on `Create`
 Now click on Free cluster and Upgrade and Create your kubernetes cluster on IBM cloud.
 
 [![](./2020-07-17_13-46.png)](#)
+
+Give name to your cluster - for me my cluster name is - `narendra-cluster`
+[![](./2020-07-17_13-55.png)](#)
+
