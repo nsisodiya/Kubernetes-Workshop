@@ -97,3 +97,8 @@ There are two types of Docker registry. Private and Public.
 Public docker registry is good for testing/demo and public images But you must never host your private code on public code.
 In CI/CD setup, whenever we commit on our branch, the pipeline should build image and upload to private registry and inform cluster that new docker image is available. We can then pull new image and deploy to our cluster. 
 This is called revisions.
+
+So, for now, We will deploy our hello world on Public Registry but later on we will setup private CI/CD pipeline.
+
+[NEXT: 3-Upload-Docker-Image-On-Public-Registry](./3-Upload-Docker-Image-On-Public-Registry.md)
+
