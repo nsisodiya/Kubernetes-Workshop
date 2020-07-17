@@ -124,9 +124,15 @@ Lets try `Kubernetes Terminal` addon.
 
 [![](./img/1/2020-07-17_15-24.png)](#)
 
+warning from IBM Cloud.
+NOTE: You can use the Kubernetes Terminal for quick access and testing of your cluster. Do not use it for production workloads.
+
+
 Next?
 ============
 
 So, we have done created our free k8s cluster which is free and having just 1 worker node.
 Next step is deploy our hello world microservice code.
+
+[NEXT: 2-Deploy-HelloWorld-Service](./2-Deploy-HelloWorld-Service.md)
 
