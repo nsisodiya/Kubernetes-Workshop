@@ -6,3 +6,24 @@ In Kubernetes, we can run multiple containers in a POD. But mostly we use one PO
 
 Lets do it.
 
+Deployment
+===========
+
+```
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: helloworld-deployment
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: helloworld-microsvc
+    spec:
+      containers:
+        - name: helloworld-microsvc
+          image: docker.pkg.github.com/nsisodiya/kubernetes-workshop/helloworld-microsvc:v1
+          ports:
+            - containerPort: 3000
+```
