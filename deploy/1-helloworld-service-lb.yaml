@@ -5,9 +5,9 @@ metadata:
   labels:
     app: helloworld-microsvc
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: helloworld-microsvc
   ports:
-    - port: 3000
-      nodePort: 31234
+    - port: 80
+      targetPort: 3000
