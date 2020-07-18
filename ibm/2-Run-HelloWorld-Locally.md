@@ -103,5 +103,4 @@ This is called revisions.
 
 So, for now, We will deploy our hello world on Public Registry but later on we will setup private CI/CD pipeline.
 
-[NEXT: 3-Upload-Docker-Image-On-Public-Registry](./3-Upload-Docker-Image-On-Public-Registry.md)
-
+[NEXT: 3-Upload-Docker-Image-On-Public-DockerHub](./3-Upload-Docker-Image-On-Public-DockerHub.md)
