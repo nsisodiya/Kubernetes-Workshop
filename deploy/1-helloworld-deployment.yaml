@@ -14,10 +14,12 @@ spec:
       labels:
         app: helloworld-microsvc
     spec:
+      imagePullSecrets:
+        - name: regcred
       containers:
         - name: helloworld-microsvc
           image: docker.pkg.github.com/nsisodiya/kubernetes-workshop/helloworld-microsvc:v1
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 3000
           env:
