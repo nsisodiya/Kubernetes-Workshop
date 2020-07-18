@@ -100,6 +100,14 @@ curl: (6) Could not resolve host: helloworld-microsvc-68c4476764-sw86d
 [![](./img/4/2020-07-18_13-53.png)](#)
 
 
+Logs
+=====
+```
+kubectl logs -l app=helloworld-microsvc
+```
+Output
+
+[![](./img/4/2020-07-18_14-08.png)](#)
 
 How to know running Image ID of a pod/container?
 =====
