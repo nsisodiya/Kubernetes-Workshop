@@ -128,3 +128,12 @@ Restart the deployment
 kubectl rollout restart deploy/helloworld-microsvc 
 ```
 When we restart, IP and hostname changes.
+
+
+Next?
+======
+
+Now our multiple containers are running fine. We used curl command inside our containers. 
+In order to run this example in browser using `http://<some-IP>/helloworld-microsvc` type of url, we need to create services.
+
+[NEXT: 5-Expose-Deployment-Using-Services](./5-Expose-Deployment-Using-Services.md)
