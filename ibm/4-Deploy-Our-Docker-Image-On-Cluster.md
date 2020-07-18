@@ -109,6 +109,25 @@ Output
 
 [![](./img/4/2020-07-18_14-08.png)](#)
 
+
+Port Forward
+============
+3 pods are running using deployments. Instead of using `exec` into containers, let's try to do it from local machine.
+
+for this, port-forwarding will be useful.
+Syntax is `LocalPort:RemotePort`
+```
+kubectl port-forward deployment/helloworld-microsvc 8585:3000
+```
+and now open `http://localhost:8585` on your browser.
+
+[![](./img/4/2020-07-18_17-34.png)](#)
+
+One thing I noticed that all request from localhost:8585 going to one 1 container and there is no load-balancing betwee 3 containers.
+
+[![](./img/4/2020-07-18_17-37.png)](#)
+
+
 How to know running Image ID of a pod/container?
 =====
 

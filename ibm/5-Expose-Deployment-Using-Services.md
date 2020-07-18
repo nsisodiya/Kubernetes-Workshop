@@ -29,4 +29,4 @@ kubectl apply -f 1-helloworld-service-nodeport.yaml
 kubectl get svc,node -owide
 ```
 
-[![](./img/5/2020-07-18_16-09.png)](#)
+[![](./img/5/2020-07-18_16-20.png)](#)
