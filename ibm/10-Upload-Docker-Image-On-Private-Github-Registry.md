@@ -49,8 +49,8 @@ Step 3 - Build and Tag your Image
 Build Image (Skip If you have done it) then list the docker images
 ```
 cd code/1-hello-world-microsvc     # Make sure you should be right directory.
-docker build -t helloworld-microsvc . # Skip this if you have created
-docker image list
+sudo docker build -t helloworld-microsvc . # Skip this if you have created
+sudo docker image list
 ```
 you can see Image id from this command.
 

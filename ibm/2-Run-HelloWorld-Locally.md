@@ -59,15 +59,15 @@ Run Locally using Docker
 
 1. Build Image
 ```
-docker build -t helloworld-microsvc .
+sudo docker build -t helloworld-microsvc .
 ```
 
 2. Run the container from iamge as Demon.
 
 ```
-docker run -d --name helloworld-microsvc-container  -p 3000:3000 helloworld-microsvc
-docker container list -a
-docker logs --follow helloworld-microsvc-container
+sudo docker run -d --name helloworld-microsvc-container  -p 3000:3000 helloworld-microsvc
+sudo docker container list -a
+sudo docker logs --follow helloworld-microsvc-container
 ```
 
 1. Open http://localhost:3000/
@@ -86,7 +86,7 @@ Please note that, Hostname is basically container id. We will create multiple po
 1. Cleapup
 
 ```
-docker rm -f helloworld-microsvc-container
+sudo docker rm -f helloworld-microsvc-container
 ```
 
 
