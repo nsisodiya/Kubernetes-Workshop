@@ -1,5 +1,5 @@
-apiVersion: apps/v1
 kind: Deployment
+apiVersion: apps/v1
 metadata:
   name: helloworld-microsvc
   labels:
@@ -14,11 +14,9 @@ spec:
       labels:
         app: helloworld-microsvc
     spec:
-      imagePullSecrets:
-        - name: regcred
       containers:
         - name: helloworld-microsvc
-          image: docker.pkg.github.com/nsisodiya/kubernetes-workshop/helloworld-microsvc:v1
+          image: nsisodiya/helloworld-microsvc:v1
           imagePullPolicy: Always
           ports:
             - containerPort: 3000

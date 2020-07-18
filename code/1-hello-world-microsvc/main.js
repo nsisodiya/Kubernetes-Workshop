@@ -6,7 +6,7 @@ var hostname = os.hostname();
 app.get("/", (req, res) => {
   console.log(`Hello world received a request on Hostname ${hostname}`);
   const target = process.env.TARGET || "World";
-  res.send(`Hello ${target}! We received a request on Hostname ${hostname}`);
+  res.send(`Hello ${target}! We received a request on Hostname ${hostname}\n`);
 });
 
 function factorial(n) {
@@ -19,7 +19,7 @@ function factorial(n) {
 
 app.get("/factorial/:n", (req, res) => {
   const n = parseInt(req.params.n); // 'user'
-  res.send(`factorial(${n}) = ${factorial(n)}`);
+  res.send(`factorial(${n}) = ${factorial(n)}\n`);
 });
 
 const port = process.env.PORT || 3000;
