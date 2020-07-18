@@ -53,3 +53,18 @@ curl 184.172.247.38:31234
 You can see, all 3 containers serve the request one by one. This is simple load balancing between containers.
 
 In the `Free Cluster` we only have one node. We will check this behaviour with multiple worker node.
+
+
+Access Nodeport Service inside cluster
+======================================
+
+Inside cluster, now we can access our service using ClusteIP or ServiceName.
+
+```
+kubectl exec --stdin --tty helloworld-microsvc-68c4476764-ct4f4 -- /bin/sh
+curl 172.21.91.141:3000
+curl helloworld-microsvc:3000
+curl helloworld-microsvc.default.svc.cluster.local:3000 
+```
+
+[![](./img/5/2020-07-18_19-18.png)](#)
