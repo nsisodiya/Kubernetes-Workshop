@@ -32,7 +32,7 @@ So, Go to Github Setting and Developer Setting and Create a new Token. Make sure
 
 Step 2 - Login to docker registry
 ================================
-```
+```sh
 cat GH_TOKEN.txt | docker login docker.pkg.github.com/ -u nsisodiya --password-stdin
 ```
 
@@ -47,7 +47,7 @@ for me, Login Success.
 Step 3 - Build and Tag your Image
 ================================
 Build Image (Skip If you have done it) then list the docker images
-```
+```sh
 cd code/1-hello-world-microsvc     # Make sure you should be right directory.
 sudo docker build -t helloworld-microsvc . # Skip this if you have created
 sudo docker image list
@@ -55,13 +55,13 @@ sudo docker image list
 you can see Image id from this command.
 
 Now, Tag
-```
+```sh
 docker tag IMAGE_ID docker.pkg.github.com//nsisodiya/kubernetes-workshop/IMAGE_NAME:VERSION
 ```
 
 you need to replace these command with your image-name, repo-name and image name. for me, I will use this.
 
-```
+```sh
 sudo docker tag 7f399529b95d docker.pkg.github.com/nsisodiya/kubernetes-workshop/helloworld-microsvc:v1
 sudo docker image list
 ```
@@ -72,7 +72,7 @@ sudo docker image list
 Step 4 - Publish Image
 ======================  
 
-```
+```sh
 docker push docker.pkg.github.com/nsisodiya/kubernetes-workshop/helloworld-microsvc:v1
 ```
 Again, you need to see exact instructions in your git repo.

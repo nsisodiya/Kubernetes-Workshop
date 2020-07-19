@@ -58,13 +58,13 @@ Run Locally using Docker
 ========================
 
 1. Build Image
-```
+```sh
 sudo docker build -t helloworld-microsvc .
 ```
 
 2. Run the container from iamge as Demon.
 
-```
+```sh
 sudo docker run -d --name helloworld-microsvc-container  -p 3000:3000 helloworld-microsvc
 sudo docker container list -a
 sudo docker logs --follow helloworld-microsvc-container
@@ -74,7 +74,7 @@ sudo docker logs --follow helloworld-microsvc-container
 
 or
 
-```
+```sh
 curl http://localhost:3000
 ```
 
@@ -85,7 +85,7 @@ Please note that, Hostname is basically container id. We will create multiple po
 
 1. Cleapup
 
-```
+```sh
 sudo docker rm -f helloworld-microsvc-container
 ```
 

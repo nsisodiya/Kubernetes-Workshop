@@ -48,7 +48,7 @@ This is how CloudShell look like
 
 So, to connect with your cluster, we need to run following command
 
-```
+```sh
 ibmcloud ks cluster config --cluster bs8m1ntd08jm31pjk9f0
 ```
 NOTE: You need to replace your cluster id in above command.
@@ -60,7 +60,7 @@ NOTE: You need to replace your cluster id in above command.
 
 You can see I am getting following result in my cloud shell.
 
-```
+```sh
 $ kubectl get nodes
 NAME            STATUS   ROLES    AGE   VERSION
 10.76.195.192   Ready    <none>   38m   v1.17.7+IKS
@@ -79,7 +79,7 @@ Click on `Access` and follow instructions.
 
 1. Run the command
 
-```
+```sh
 curl -sL https://ibm.biz/idt-installer | bash
 ```
 
@@ -91,7 +91,7 @@ You will see following result.
 
 Follow instruction, you will run command similar to this
 
-```
+```sh
 ibmcloud login -a cloud.ibm.com -r us-south -g Default
 ```
 Check `Access` page for exact commands.
@@ -100,7 +100,7 @@ Check `Access` page for exact commands.
 
 Check I have logged in successfully. Now, lets connect.
 
-```
+```sh
 ibmcloud ks cluster config --cluster bs8m1ntd08jm31pjk9f0
 ```
 NOTE: You need to replace your cluster id in above command.

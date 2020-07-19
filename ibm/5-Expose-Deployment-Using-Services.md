@@ -10,7 +10,7 @@ Nodeport
 ========
 content of `deploy/1-helloworld-service-nodeport.yaml`
 
-```
+```yml
 kind: Service
 apiVersion: v1
 metadata:
@@ -29,7 +29,7 @@ spec:
 
 and lets apply this settings.
 
-```
+```sh
 cd deploy
 kubectl apply -f 1-helloworld-service-nodeport.yaml
 kubectl get svc,node -owide
@@ -77,7 +77,7 @@ Access Nodeport Service from You local machine
 In the above example, External IP of our WorkerNode is `184.172.247.38` and we have exposed port `31234`.
 So anybody outside from this worker ndoe, can access our service via `http://184.172.247.38:31234`
 
-```
+```sh
 curl 184.172.247.38:31234
 ```
 
@@ -93,7 +93,7 @@ Access Nodeport Service inside cluster
 
 Inside cluster, now we can access our service using ClusteIP or ServiceName.
 
-```
+```sh
 kubectl exec --stdin --tty helloworld-microsvc-68c4476764-ct4f4 -- /bin/sh
 curl 172.21.91.141
 curl helloworld-microsvc
@@ -123,3 +123,8 @@ From here we can do so many things.
 4. We can user `knative` for scaling our service on load.
 5. We have mainly used IP address and we can set proper domain name like `http://api.my-startup.io/user-service`
 6. We also need to explore Ingress, ALB etc.
+
+Lets first do a load testing and scale our pods manually.
+
+
+[NEXT: 6-Load-Testing-and-Scaling](./6-Load-Testing-and-Scaling.md)

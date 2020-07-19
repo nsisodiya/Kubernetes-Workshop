@@ -12,7 +12,7 @@ Lets deploy our image `nsisodiya/helloworld-microsvc:v1` from DockerHub.
 
 Content of `1-helloworld-deployment.yaml`
 
-```
+```yml
 kind: Deployment
 apiVersion: apps/v1
 metadata:
@@ -42,7 +42,7 @@ spec:
 
 Lets apply this deployments.
 
-```
+```sh
 $ cd deploy
 $ kubectl apply -f 1-helloworld-deployment.yaml
 
@@ -50,6 +50,7 @@ deployment.apps/helloworld-microsvc created
 
 $ kubectl get deploy,pods,svc -l app=helloworld-microsvc
 ```
+
 If you face problem with YML then you can validate at - https://kubeyaml.com/
 
 
@@ -60,7 +61,7 @@ Explore Pods
 =============
 Lets play with pods with few commands.
 
-```
+```sh
 kubectl get pods -owide
 ```
 
@@ -72,7 +73,7 @@ Shell inside a pod
 
 Out of 3 pods, one pod is `helloworld-microsvc-68c4476764-ct4f4` and lets access shell inside this pod.
 
-```
+```sh
 kubectl exec --stdin --tty helloworld-microsvc-68c4476764-ct4f4 -- /bin/sh
 ```
 
@@ -102,7 +103,7 @@ curl: (6) Could not resolve host: helloworld-microsvc-68c4476764-sw86d
 
 Logs
 =====
-```
+```sh
 kubectl logs -l app=helloworld-microsvc
 ```
 Output
@@ -116,7 +117,7 @@ Port Forward
 
 for this, port-forwarding will be useful.
 Syntax is `LocalPort:RemotePort`
-```
+```sh
 kubectl port-forward deployment/helloworld-microsvc 8585:3000
 ```
 and now open `http://localhost:8585` on your browser.
@@ -131,19 +132,19 @@ One thing I noticed that all request from localhost:8585 going to one 1 containe
 How to know running Image ID of a pod/container?
 =====
 
-```
+```sh
 kubectl describe pod helloworld-microsvc-68c4476764-ct4f4 | grep "Image ID"
 ```
 or
 Using `appLabel`
-```
+```sh
 kubectl describe pod $(kubectl get pods -l app=helloworld-microsvc | grep Running | head -n1 | cut -f1 -d " ") | grep "Image ID"
 ```
 
 
 Restart the deployment
 =====
-```
+```sh
 kubectl rollout restart deploy/helloworld-microsvc 
 ```
 When we restart, IP and hostname changes.

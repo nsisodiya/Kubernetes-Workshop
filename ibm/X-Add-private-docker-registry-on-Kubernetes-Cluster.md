@@ -8,7 +8,7 @@ Locate the config file. it should be on `~/.docker/config.json` or `/root/.docke
 
 2. Now run following command.
 If you Docker using sudo but kubectl is on normal user.
-```
+```sh
 sudo cat /root/.docker/config.json > config.json
 kubectl create secret generic regcred --from-file=.dockerconfigjson=./config.json --type=kubernetes.io/dockerconfigjson
 rm -rf config.json
@@ -16,7 +16,7 @@ rm -rf config.json
 
 otherwise
 
-```
+```sh
 kubectl create secret generic regcred --from-file=.dockerconfigjson=~/.docker/config.json --type=kubernetes.io/dockerconfigjson
 ```
 
@@ -24,7 +24,7 @@ You should see message like - `secret/regcred created` !
 
 Verify
 
-```
+```sh
 kubectl get secret regcred --output="jsonpath={.data.\.dockerconfigjson}" | base64 --decode
 ```
 

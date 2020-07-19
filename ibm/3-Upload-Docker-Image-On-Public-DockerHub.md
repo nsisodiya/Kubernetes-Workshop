@@ -27,7 +27,7 @@ Warning : Include DOCKER_TOKEN.txt in your git repo otherwise you may push it on
 
 Step 2 - Login to docker registry
 ================================
-```
+```sh
 cat ~/DOCKER_TOKEN.txt | sudo docker login -u nsisodiya --password-stdin
 ```
 
@@ -53,7 +53,7 @@ Note down the command, we will need in next step.
 Step 4 - Build your Image
 ================================
 Build Image (Skip If you have done it) then list the docker images
-```
+```sh
 cd code/1-hello-world-microsvc
 sudo docker build -t nsisodiya/helloworld-microsvc .
 sudo docker image list
@@ -69,7 +69,7 @@ Step 5 - Tag and Publish Image
 Now, we are tagging our image and publish it to DockerHub.
 Replace correct `image-id` and `username` in following commands.
 
-```
+```sh
 sudo docker image list
 sudo docker tag dd3e5e5a2375 nsisodiya/helloworld-microsvc:v1
 sudo docker image list

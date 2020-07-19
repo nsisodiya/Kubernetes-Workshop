@@ -1,12 +1,12 @@
 Chapter 3 - Setup Tekton Pipelines
 ==================================
 
-```
+```sh
 $ kubectl apply -f https://storage.googleapis.com/tekton-releases/pipeline/latest/release.yaml
 
 ```
 output 
-```
+```sh
 kubectl get pods --namespace tekton-pipelines --watch
 
 ```
