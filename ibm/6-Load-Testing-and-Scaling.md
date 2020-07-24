@@ -270,3 +270,85 @@ Details (average, fastest, slowest):
 Status code distribution:
   [200]	2255 responses
 ```
+
+Load with don't much cpu
+========================
+
+```sh
+▶ hey -z 20s -c 5000 http://184.172.247.38:31234
+
+Summary:
+  Total:	32.1809 secs
+  Slowest:	19.1780 secs
+  Fastest:	0.2863 secs
+  Average:	3.3070 secs
+  Requests/sec:	781.2699
+  
+  Total data:	2072775 bytes
+  Size/request:	87 bytes
+
+Response time histogram:
+  0.286 [1]	|
+  2.175 [9140]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  4.065 [9851]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  5.954 [2111]	|■■■■■■■■■
+  7.843 [929]	|■■■■
+  9.732 [693]	|■■■
+  11.621 [230]	|■
+  13.511 [351]	|■
+  15.400 [158]	|■
+  17.289 [249]	|■
+  19.178 [112]	|
+
+
+Latency distribution:
+  10% in 1.0806 secs
+  25% in 1.7295 secs
+  50% in 2.4381 secs
+  75% in 3.6166 secs
+  90% in 6.2568 secs
+  95% in 9.5920 secs
+  99% in 16.4654 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:	0.0746 secs, 0.2863 secs, 19.1780 secs
+  DNS-lookup:	0.0000 secs, 0.0000 secs, 0.0000 secs
+  req write:	0.0001 secs, 0.0000 secs, 0.0049 secs
+  resp wait:	3.0855 secs, 0.2861 secs, 18.6459 secs
+  resp read:	0.0001 secs, 0.0000 secs, 0.0055 secs
+
+Status code distribution:
+  [200]	23825 responses
+
+Error distribution:
+  [1260]	Get http://184.172.247.38:31234: net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+```
+
+We are still getting Errors but since there is not much CPU is required for this request, our request time is highly improved
+
+```sh
+  Slowest:	19.1780 secs
+  Fastest:	0.2863 secs
+  Average:	3.3070 secs
+  Requests/sec:	781.2699
+```
+
+Max Usage
+==========
+Maximum usage of of our worker node depends on 2 thing mainly.
+How many request per second a give node can handle and how much CPU/Memory a request is taking.
+Also, we have not defined limit on each pod. So we can actually define total limit to CPU usage by an given POD.
+
+See Logs
+=======
+```sh
+kubectl logs -f -lapp=helloworld-microsvc 
+```
+Next??
+======
+We have learned how to scale our pods. Free cluster has just one worker and limited memory. If we have multiple workers node then our pods can be scaled on multiple workers.
+
+In next sections, we will use knative to auto-scale our cluster.
+
+
+[NEXT: 7-Install-knative](./7-Install-knative.md)

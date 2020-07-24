@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: serving.knative.dev/v1
+metadata:
+  name: helloworld
+spec:
+  template:
+    metadata:
+      name: helloworld-v1
+    spec:
+      containers:
+        - image: nsisodiya/helloworld-microsvc:v1
+          env:
+            - name: TARGET
+              value: "HelloWorld Sample v1"
